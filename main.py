@@ -2,7 +2,7 @@
 
 a = 17
 b = 23
-c = int(input('Task 1. Operations with variables. Enter c variable: '))
+c = int(input('Task 1. Operations with variables. d = a + b + c. a = 17; b = 23. Enter c variable: '))
 
 d = a + b + c
 
@@ -13,7 +13,17 @@ print(result)
 # --------------TASK 2--------------
 
 time_in_sec = int(input('Task 2. Format time in seconds to hh:mm:ss. Enter time in seconds: '))
-time_hour = time_in_sec / 3600
+
+time_in_hour = time_in_sec / 3600
+time_in_minutes = time_in_sec / 60
+
+hours = int(time_in_hour)
+minutes_gross = time_in_minutes % 60
+
+minutes = int(minutes_gross)
+seconds = int(round((minutes_gross - minutes) * 60, 0))
+
+print(f"The {time_in_sec} seconds formatted hh:mm:ss - {hours}:{minutes}:{seconds}")
 
 # --------------TASK 3--------------
 
