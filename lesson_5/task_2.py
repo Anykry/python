@@ -1,4 +1,4 @@
-my_file = open('out_file.txt', "r")
+my_file = open('task_1_out_file.txt', "r")
 total_lines = my_file.readlines()
 
 print(f'In this file: {len(total_lines)} lines')
