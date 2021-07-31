@@ -4,7 +4,7 @@ def employee_data(line):
     return str_data[0], str_data[2]
 
 
-salary_file = open('salary.txt', 'r', encoding='utf-8')
+salary_file = open('task_3_salary.txt', 'r', encoding='utf-8')
 
 sum_salary = 0
 
