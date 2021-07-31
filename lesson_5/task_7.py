@@ -52,7 +52,7 @@ if profitable_firms > 0:
 json_list.append(firm_data_dictionary)
 json_list.append(average_profit_dict)
 
-with open('firm_result.json', 'w', encoding='utf-8') as res_file:
+with open('task_7_firm_result.json', 'w', encoding='utf-8') as res_file:
     json.dump(json_list, res_file)
 
 
