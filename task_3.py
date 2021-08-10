@@ -19,15 +19,17 @@ class Cell:
 
     def make_order(self, count):
         iter = self.__nucleus // count
-
         i = 1
-        st = '*'
+        final_str = ''
         while i <= iter:
+            st = '*'
             st *= count
-            st = st + '!'
+            st = st + '\n'
             i += 1
-        st = st + (count - iter*count)*'*'
-        print(st)
+            final_str += st
+        final_str = final_str + (self.__nucleus - iter*count)*'*'
+
+        return final_str
 
 
 my_cell = Cell(12)
