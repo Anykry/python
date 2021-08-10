@@ -1,13 +1,17 @@
 class Cell:
     def __init__(self, nucleus):
         self.__nucleus = nucleus
+        self.count = nucleus
+
+    def __str__(self):
+        return f'{self.__nucleus}'
 
     def __add__(self, other):
-        return self.__nucleus + other.__nucleus
+        return Cell(self.__nucleus + other.__nucleus)
 
     def __sub__(self, other):
         if self.__nucleus - other.__nucleus > 0:
-            return self.__nucleus - other.__nucleus
+            return Cell(self.__nucleus - other.__nucleus)
         else:
             return f'Can not perform subtraction'
 
@@ -34,3 +38,7 @@ class Cell:
 
 my_cell = Cell(12)
 print(my_cell.make_order(5))
+
+my_cell2 = Cell(5)
+my_cell3 = my_cell + my_cell2
+print(my_cell3)
