@@ -10,7 +10,7 @@ class Cell:
         return Cell(self.__nucleus + other.__nucleus)
 
     def __sub__(self, other):
-        if self.__nucleus - other.__nucleus > 0:
+        if self.__nucleus - other.__nucleus >= 0:
             return Cell(self.__nucleus - other.__nucleus)
         else:
             return f'Can not perform subtraction'
