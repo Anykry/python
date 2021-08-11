@@ -6,7 +6,9 @@ class Matrix:
     def __str__(self):
         row = ''
         for el in self.matrix_list:
-            row += f'{el}'+'\n'
+            for i in el:
+                row += f'{i}'+' '
+            row += '\n'
         return row
 
     def __add__(self, other):
