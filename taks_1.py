@@ -18,7 +18,7 @@ class Date:
         if month < 1 or month > 12:
             error = 'incorrect month'
             is_error = True
-        if is_error == False and month == 2:
+        if not is_error and month == 2:
             if day > 29:
                 is_error = True
                 error = 'incorrect day'
